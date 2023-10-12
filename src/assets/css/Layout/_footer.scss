@@ -1,0 +1,59 @@
+footer {
+  background-color: var(--main-color);
+  padding: 80rem 0;
+  margin-top: 150rem;
+  text-align: center;
+  font-family: 'NotoSansJP-m';
+  font-size: 30rem;
+  @include media ("sp") {
+    padding: 150rem 0;
+    font-size: 70rem;
+  }
+  .footer-logo {
+    width: 320rem;
+    display: block;
+    margin: auto;
+    @include media ("sp") {
+      width: 30%;
+    }
+  }
+  .footer-menu {
+    color: #FFF;
+    margin-top: 80rem;
+    @include media ("sp") {
+      display: none;
+    }
+    a:not(:last-child) {
+      position: relative;
+      padding: 0 30rem;
+      &::after {
+        content: "|";
+        position: absolute;
+        right: -10rem;
+      }
+    }
+    a:last-child {
+      margin-left: 30rem;
+    }
+  }
+  .link-part {
+    padding: 30rem 0;
+    @include media ("sp") {
+      width: 100%;
+      padding: 100rem 0;
+    }
+    .policy {
+      padding: 0 100rem;
+      @include media ("sp") {
+        padding: 0 250rem;
+      }
+    }
+  }
+  .copyright {
+    font-family: 'NotoSansJP-r';
+    font-size: 20rem;
+    @include media ("sp") {
+      font-size: 50rem;
+    }
+  }
+}

@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Rounded Mplus 1c-m';
+    src: url(../font/RoundedMplus1c-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Rounded Mplus 1c-b';
+    src: url(../font/RoundedMplus1c-Bold.ttf);
+}
+
+
+@font-face {
+    font-family: 'Rounded Mplus 1c-r';
+    src: url(../font/RoundedMplus1c-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'NotoSansJP-r';
+    src: url(../font/NotoSansJP-Regular.otf);
+}
+
+@font-face {
+    font-family: 'NotoSansJP-m';
+    src: url(../font/NotoSansJP-Medium.otf);
+}
+
+@font-face {
+    font-family: 'NotoSansJP-b';
+    src: url(../font/NotoSansJP-Bold.otf);
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-size: 0.052vw;
+}
+
+body {
+    font-size: 20rem;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: "NotoSansJP-b";
+    @include media ("sp") {
+        font-size: 60rem;
+    }
+}
+
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.wrap {
+    width: calc(100% - 400rem );
+    margin: auto;
+    @include media ("sp") {
+        width: 100%;
+        padding: 0 100rem;
+    }
+}
+.header-wrap {
+    width: calc(100% - 200rem); 
+    margin: auto;
+    @include media ("sp") {
+        width: 100%;
+        padding: 50rem 50rem;
+    }
+}
+
+.section-title {
+    font-family: 'Rounded Mplus 1c-m';
+    font-size: 50rem;
+    color: #FFF;
+    background-color: var(--main-color);
+    padding: 20rem 0;
+    text-align: center;
+    position: relative;
+    @include media ("sp") {
+        font-size: 80rem;
+        padding: 50rem 0;
+    }
+    &::after {
+        content: "";
+        background-image: url(../assets/img/small-bike.png);
+        width: 180rem;
+        height: 100rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .yellow-color {
+        color: var(--yellow-color);
+    }
+}
+
+
+.main-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rounded Mplus 1c-m';
+    font-size: 40rem;
+    color: #FFF;
+    width: 750rem;
+    height: 90rem;
+    margin: auto;
+    margin-top: 150rem;
+    background-color: var(--main-color);
+    border: 1rem solid var(--main-color);
+    outline: 3rem solid #FFF;
+    border-radius: 15rem;
+    transition: all .3s;
+    position: relative;
+    @include media ("sp") {
+      width: 90%;
+      height: 180rem;
+      font-size: 70rem;
+      border-radius: 30rem;
+    }
+    &::after {
+      content: "＞";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 50rem;
+      @include media ("sp") {
+        right: 250rem;
+      }
+    }
+    .free {
+      font-family: "Rounded Mplus 1c-r";
+      font-size: 25rem;
+      background-color: #FFF;
+      border: 1rem solid #FFF;
+      color: var(--main-color);
+      padding: 5rem 20rem;
+      border-radius: 10rem;
+      transition: all .3s;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 50rem;
+      @include media ("sp") {
+        font-size: 60rem;
+        padding: 10rem 30rem;
+        left: 250rem;
+      }
+    }
+    .twenty-five {
+      margin-left: 60rem;
+    }
+    &:hover {
+      background-color: #FFF;
+      color: var(--main-color);
+      outline: none;
+      .free {
+        background-color: var(--main-color);
+        color: #FFF;
+      }
+    }
+   }
+
+   .stalker {
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        border-radius: 50%;
+        mix-blend-mode: exclusion;
+        z-index: 1002;
+    }

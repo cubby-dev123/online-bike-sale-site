@@ -1,0 +1,54 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rem 0;
+  @include media ("sp") {
+    padding: 50rem 0;
+  }
+  .main-logo {
+    width: 320rem;
+    @include media ("sp") {
+      width: 450rem;
+    }
+  }
+  .main-menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 50rem;
+    font-family: 'Rounded Mplus 1c-m';
+    font-size: 25rem;
+    color: #F97D1D;
+    a {
+      position: relative;
+      &::after {
+        content: "";
+        width: 0;
+        height: 3rem;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        background-color: var(--main-color);
+        transition: all .5s;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+    }
+    @include media ("sp") {
+      display: none;
+    }
+  }
+  .sp-menu {
+    display: none;
+    @include media ("sp") {
+      display: block;
+      .sp-item {
+        font-family: 'Rounded Mplus 1c-m';
+        font-size: 70rem;
+        color: #F97D1D;
+      }
+    }
+  }
+}
