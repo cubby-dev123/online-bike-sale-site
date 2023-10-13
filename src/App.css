@@ -704,6 +704,7 @@ body {
 @media only screen and (max-width: 768px) {
   body {
     font-size: 60rem;
+    overflow: hidden;
   }
 }
 
@@ -1177,6 +1178,9 @@ header .main-menu a::after {
   background-color: var(--main-color);
   transition: all 0.5s;
 }
+.main {
+  position: relative;
+}
 header .main-menu a:hover::after {
   width: 100%;
 }
@@ -1306,7 +1310,14 @@ main .fv .fv-right .contact-btn {
 }
 @media only screen and (max-width: 768px) {
   main .fv .fv-right .contact-btn {
-    display: none;
+    position: fixed;
+    left: 0rem;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+    background-color: rgba(255, 125, 30, 0.7);
+    padding: 30rem;
+    border-radius: 100rem;
   }
 }
 main .fv .fv-right .contact-btn .btn {
@@ -1326,11 +1337,32 @@ main .fv .fv-right .contact-btn .btn {
 main .fv .fv-right .contact-btn .btn .icon {
   width: 50rem;
 }
+@media only screen and (max-width: 768px) {
+  main .fv .fv-right .contact-btn .btn .icon {
+    width: 100rem;
+  }
+}
 main .fv .fv-right .contact-btn .line-btn {
   background-color: #06C755;
 }
+@media only screen and (max-width: 768px) {
+  main .fv .fv-right .contact-btn .line-btn {
+    font-size: 50rem;
+    width: 40%;
+    border-radius: 100rem;
+    padding: 30rem;
+  }
+}
 main .fv .fv-right .contact-btn .phone-btn {
   background-color: #E23B4B;
+}
+@media only screen and (max-width: 768px) {
+  main .fv .fv-right .contact-btn .phone-btn {
+    width: 40%;
+    font-size: 50rem;
+    border-radius: 100rem;
+    padding: 30rem;
+  }
 }
 main .fv .fv-right .contact-btn .txt {
   position: relative;
