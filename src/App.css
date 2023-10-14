@@ -762,6 +762,13 @@ img {
   background-size: contain;
   background-repeat: no-repeat;
 }
+@media only screen and (max-width: 768px) {
+  .section-title::after {
+    width: 250rem;
+    height: 140rem;
+    top: -80rem;
+  }
+}
 .section-title .yellow-color {
   color: var(--yellow-color);
 }
@@ -1246,6 +1253,14 @@ main .fv .fv-right .complete, main .fv .fv-right .not-need {
     text-align: center;
   }
 }
+@media only screen and (max-width: 768px) {
+  main .fv .fv-right .not-need {
+      padding-bottom: 70rem;
+  }
+  main .fv .fv-right .complete {
+    margin-top: 70rem;
+  }
+}
 main .fv .fv-right .complete .red, main .fv .fv-right .not-need .red {
   color: #FF0000;
 }
@@ -1306,7 +1321,6 @@ main .fv .fv-right .contact-btn {
   flex-direction: row;
   justify-content: center;
   gap: 60rem;
-  margin-top: 10rem;
 }
 @media only screen and (max-width: 768px) {
   main .fv .fv-right .contact-btn {
@@ -1377,7 +1391,6 @@ main #input-data {
 }
 main #input-data .bike-info, main #input-data .customer-info {
   width: 650rem;
-  height: 600rem;
   background-color: var(--main-color);
   margin-top: 150rem;
   border: 1rem solid var(--main-color);
@@ -1385,11 +1398,12 @@ main #input-data .bike-info, main #input-data .customer-info {
   outline-offset: 3rem;
   font-family: "NotoSansJP-m";
   color: #FFF;
+  padding-bottom: 80rem;
 }
 @media only screen and (max-width: 768px) {
   main #input-data .bike-info, main #input-data .customer-info {
     width: 90%;
-    height: 1250rem;
+    padding-bottom: 200rem;
   }
 }
 main #input-data .bike-info .form-title, main #input-data .customer-info .form-title {
@@ -1402,6 +1416,11 @@ main #input-data .bike-info .form-title, main #input-data .customer-info .form-t
   margin: auto;
   margin-top: 80rem;
   padding-bottom: 20rem;
+}
+@media only screen and (max-width: 768px) {
+  main #input-data .bike-info .form-title, main #input-data .customer-info .form-title  {
+    margin-top: 200rem;
+  }
 }
 main #input-data .bike-info .form-title .step-1, main #input-data .customer-info .form-title .step-1 {
   font-size: 25rem;
@@ -1430,11 +1449,11 @@ main #input-data .bike-info .form-content, main #input-data .customer-info .form
   font-family: "NotoSansJP-m";
 }
 main #input-data .bike-info .form-content .input-info .input-item, main #input-data .customer-info .form-content .input-info .input-item {
-  margin-top: 30rem;
+  margin-top: 50rem;
 }
 @media only screen and (max-width: 768px) {
   main #input-data .bike-info .form-content .input-info .input-item, main #input-data .customer-info .form-content .input-info .input-item {
-    margin-top: 70rem;
+    margin-top: 100rem;
   }
 }
 main #input-data .bike-info .form-content .input-info .input-item label, main #input-data .customer-info .form-content .input-info .input-item label {
@@ -1605,6 +1624,17 @@ main #achivement .section-content .moto-item .txt3 {
     font-size: 60rem;
   }
 }
+main #achivement .section-content .moto-item .txt2 {
+  text-align: center;
+  font-size: 18rem;
+  padding: 15rem;
+}
+@media only screen and (max-width: 768px) {
+  main #achivement .section-content .moto-item .txt2 {
+    font-size: 60rem;
+    padding: 2rem;
+  }
+}
 main #achivement .section-content .moto-item .moto1 {
   width: 358rem;
 }
@@ -1614,7 +1644,7 @@ main #achivement .section-content .moto-item .moto1 {
   }
 }
 main #achivement .section-content .moto-item .moto2 {
-  width: 470rem;
+  width: 425rem;
 }
 @media only screen and (max-width: 768px) {
   main #achivement .section-content .moto-item .moto2 {
@@ -1622,7 +1652,7 @@ main #achivement .section-content .moto-item .moto2 {
   }
 }
 main #achivement .section-content .moto-item .moto3 {
-  width: 403rem;
+  width: 397rem;
 }
 @media only screen and (max-width: 768px) {
   main #achivement .section-content .moto-item .moto3 {
@@ -1821,7 +1851,7 @@ main #step .section-content .step-item .step-2 {
 }
 @media only screen and (max-width: 768px) {
   main #step .section-content .step-item .step-2 {
-    width: 90%;
+    width: 80%;
     margin: auto;
     padding: 100rem 0;
   }
@@ -1979,7 +2009,7 @@ main #reason .section-content .reason-img .reason-girl {
     bottom: 0;
     right: 0;
     z-index: -1;
-    opacity: 0.7;
+    opacity: 0.6;
   }
 }
 
@@ -1995,6 +2025,7 @@ footer {
   footer {
     padding: 150rem 0;
     font-size: 70rem;
+    padding-bottom: 250rem;
   }
 }
 footer .footer-logo {
@@ -2053,4 +2084,12 @@ footer .copyright {
   footer .copyright {
     font-size: 50rem;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+.slick-list {
+  padding: 0 18px !important;
+}
+.slick-dots {
+  transform:  translate(-50%);
+  left: 50%;
+}
+/*# sourceMappingURL=style.css.map */

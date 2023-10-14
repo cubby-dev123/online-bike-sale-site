@@ -217,7 +217,7 @@ export default function Main () {
                      <figure className="moto2">
                         <img src={slick_moto2} alt="" />
                      </figure>
-                     <div className="txt">
+                     <div className="txt2">
                         <p className="moto-type">スーパーカブC125</p>
                         <p className="moto-price">24.6万円</p>
                         <p className="moto-date">08/02 18:43</p>
